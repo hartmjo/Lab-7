@@ -5,15 +5,15 @@ import javax.swing.*;
 public class Counter implements ActionListener {
 
 
-  Jlabel leftLabel;
-  Jlabel rightLabel;
+  JLabel leftLabel;
+  JLabel rightLabel;
   int leftCount;
   int rightCount;
 
 
 Counter () {
-  Jframe frame = new Jframe("Let's Count");
-  fram.setLayout(new FlowLayout());
+  JFrame frame = new JFrame("Let's Count");
+  frame.setLayout(new FlowLayout());
   frame.setSize(200,110);
 
   JButton left = new JButton("Left");
@@ -37,8 +37,9 @@ Counter () {
     reset.addActionListener(this);
     frame.add(reset);
     frame.setVisible(true);
+    }
 
-    public void actionPerformed(ActionEvent ae) {
+  public void actionPerformed(ActionEvent ae) {
     if (ae.getActionCommand().equals("Left")){
       leftCount++;
       leftLabel.setText("Count: " + leftCount);
@@ -56,4 +57,3 @@ Counter () {
       }
     }
   }
-}
